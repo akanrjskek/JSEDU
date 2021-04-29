@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        var id = "akan";
+        var pass = 1234;
+        var name = "yeonghun";
+
+        function login(inid, inpass){
+            if(id == inid){
+                if(pass == inpass){
+                    document.write(name + "님 접속을 환영합니다.");
+                }
+                else{
+                    alert("비밀번호가 틀렸습니다.");
+                }
+            }
+            else{
+                alert("존재하지 않는 아이디입니다.")
+            }
+        }
+        
+        var inid = prompt("아이디를 입력하세요.");
+        var inpass = prompt("비밀번호를 입력하세요.");
+
+        login(inid,inpass);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

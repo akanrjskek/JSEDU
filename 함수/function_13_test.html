@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        function TestScore(name, kor, eng){
+            this.UserName = name;
+            this.korNum = kor;
+            this.engNum = eng;
+
+            TestScore.prototype.getTestInfo = function(){
+                document.write("이름: " + this.UserName, "<br>");
+                document.write("국어: " + this.korNum, "<br>");
+                document.write("영어: " + this.engNum, "<br>");
+            }
+            TestScore.prototype.getAvg = function(){
+                return (this.korNum + this.engNum) / 2;
+            }
+        }
+
+        var kimgun = new TestScore("kim", 100, 100);
+        var ohgun = new TestScore("Oh",90,95);
+
+        kimgun.getTestInfo();
+        document.write(kimgun.UserName + "의 평균 점수는 " + kimgun.getAvg() + "입니다.");
+
+        console.log(ohgun);
+    </script>
+</head>
+<body>
+</body>
+</html>
